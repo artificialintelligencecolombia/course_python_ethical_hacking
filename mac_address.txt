@@ -1,0 +1,62 @@
+==============================
+MAC ADDRESS
+==============================
+
+---------------------
+Media Access Control
+---------------------
+
+- Unique identifier.
+- Assigned to network interfaces. For communications at the data link layer of a network segment.
+- Hardware address, embedded in the Network Interface Card (NIC) by manufacturer.
+- six pairs of hexadecimal digits -> 00:1A:2B:3C:4D:5E.
+- Used PRIMARLY within the LAN to ensure data packets reach the correct physical device.
+
+
+Functionalities
+---------------
+
+1. Identify devices WITHIN a LAN.
+2. Facilitate data transfer within a LAN.
+
+Note: MAC addresses are designed to be globally unique (BUUUT).
+Note: Its possible to change (SPOOF) a MAC address by using software tools.
+
+--------------------------
+Why change the MAC address
+--------------------------
+
+1. For anonymity purposes.
+2. Impersonates a device, allowing us to do tasks we normally aren't able to do.
+3. Hide identity.
+
+-------------------------------------------
+ifconfig
+-------------------------------------------
+
+- Used to configure network interfaces, display the status of network interfaces and manage IP addresses.
+- ifconfig (typically used on Unix OS). ipconfig (used on Windows OS).
+
+Use cases
+---------------
+
+	- ifconfig
+	- ifconfig eth0 down  # Disable network interface eth0
+	- ifconfig eth0 up    # Enable network interface eth0
+	- ifconfig eth0 192.168.1.10 netmask 255.255.255.0  # Assign IP address
+
+-------------------------------------------
+Changing a MAC address
+-------------------------------------------
+
+1. ipconfig
+
+-----------------
+Quotes or Highlights
+-----------------
+
+> "This is a quote from someone notable."
+
+-----------------
+End of Document
+-----------------
