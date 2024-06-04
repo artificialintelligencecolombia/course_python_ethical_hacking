@@ -1,0 +1,13 @@
+==============================
+PULL CHANGES FROM REMOTE REPO TO LOCAL
+==============================
+
+---------------------
+Process
+---------------------
+
+After updating the remote repo, If I want to pull the changes to local:
+
+1. Locate to local repo of machine B.
+2. git fetch origin # Fetches updates from the remote repository named 'origin'
+3. git merge origin/main  # Replace 'main' with your branch name if different
