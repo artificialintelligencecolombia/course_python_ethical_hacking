@@ -29,6 +29,9 @@ Why change the MAC address
 1. For anonymity purposes.
 2. Impersonates a device, allowing us to do tasks we normally aren't able to do.
 3. Hide identity.
+4. Man in the middle (MitM): intercept and manipulate network traffic.
+
+MAC address spoofing is typically used to bypass security measures, evade tracking, and gain unauthorized access to networks or resources.
 
 -------------------------------------------
 ifconfig
@@ -46,16 +49,32 @@ Use cases
 	- ifconfig eth0 192.168.1.10 netmask 255.255.255.0  # Assign IP address
 
 -------------------------------------------
-Changing a MAC address
+Changing Spoofing a MAC address
 -------------------------------------------
 
-1. ipconfig
+1.	ifconfig # list the network interfaces
+2.	ifconfig eth0 down # disable network interface. Disconnects to the network.
+3.	ifconfig eth0 hw ether 00:11:22:33:44:55 # Modify the MAC address.
+4.	ifconfig eth0 up # enable network interface
+5.	ifconfig
 
------------------
-Quotes or Highlights
+
+Effects on Spoofin the MAC address
+---------------
+
+* Network will recognize the device as a new one.
+* Depending on DHCP configuration, it may be conflicts with the IP address.
+* Active session may be dropped. Applications may need to reconnect.
+
+Testing reconnection
 -----------------
 
-> "This is a quote from someone notable."
+After spoofing the MAC address, we can ping a known host to test the reconnection:
+
+	ping -c 4 google.com
+# Tell the ping command to stop after sending (and receiving) 4 echo requests.
+
+> eth0 VMWare kali machine's ether 00:0c:29:25:49:db (DEFAULT MAC ADDRESS).
 
 -----------------
 End of Document

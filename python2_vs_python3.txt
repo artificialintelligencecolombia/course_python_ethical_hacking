@@ -14,7 +14,7 @@ Differences
 - It facilitates the execution of scripts in unix-like envs.
 - ITS A GOOD PRACTICE
 
-Without shebang
+.py Files without shebang
 ---------------
 
 - You need to explicitly specify the interpreter.	
