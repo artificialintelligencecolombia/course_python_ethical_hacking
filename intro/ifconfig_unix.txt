@@ -1,0 +1,79 @@
+==============================
+IFCONFIG
+==============================
+
+Provides detailed info about the network interfaces on a Linux machine.
+
+---------------------
+eth0
+---------------------
+
+- Represents a physical or virtual network interface (Network Interface Card) (hardware -> network card).
+- Connects the system to a LAN or the internet.
+- The interface has a unique MAC address.
+- The interface has an IP address.
+- Emulates a physical NIC.
+
+> Note: with NAT mode in the virtual machine, eth0 uses the host's IP address for external communications, while hiding the VM's internal IP.
+
+eth0 Flags and Status
+---------------
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST> mtu 1500
+
+- UP: The interface is operational.
+
+- BROADCAST: The interface supports broadcasting. sending data to all nodes in 	a local network.
+
+- RUNNING: The interface has been started and can be used.
+
+- MULTICAST: The interface supports multicasting. (sending data to a group of destination computers).
+
+- MTU (Maximum Transmission Unit): 1500: largest packet size that can be sent over this network interface, measured in bytes.
+
+- IPv4 Address:
+	- inet 192.168.11.128: The IPv4 address assigned to the interface.
+	- netmask 255.255.255.0: The subnet mask associated with the IPv4 address. which determines the network portion of the address.
+	- broadcast 192.168.11.255: The broadcast address for the subnet, used for sending messages to all devices on the network.
+
+- IPv6 Address:
+	- inet6 fe80::20c:29ff:fe25:49db: The IPv6 address assigned to the interface.
+	- prefixlen 64: The length of the subnet mask in bits for IPv6.
+	- scopeid 0x20<link>: The scope of the address (link-local in this case).
+- MAC Address (Ethernet Address):
+
+	- ether 00:0c:29:25:49:db: The hardware address of the interface.
+- Transmission Queue Length:
+	- txqueuelen 1000: The length of the transmission queue.
+	
+- Packet Statistics:
+	- RX packets 504856: Number of received packets.
+	- bytes 750259974 (715.5 MiB): Amount of data received.
+	- RX errors 0: Number of receive errors.
+	- dropped 0: Number of dropped packets.
+	- overruns 0: Number of receive overruns.
+	- frame 0: Number of framing errors.
+	- TX packets 22108: Number of transmitted packets.
+	- bytes 2221500 (2.1 MiB): Amount of data transmitted.
+	- TX errors 0: Number of transmission errors.
+	- dropped 0: Number of dropped transmitted packets.
+	- overruns 0: Number of transmission overruns.
+	- carrier 0: Number of carrier losses.
+	- collisions 0: Number of collisions detected.
+
+lo
+---------------
+
+- Its the virtual interface that the system uses to communicate with itself.
+- Crucial for testing, development and running network services locally.
+
+-----------------
+Quotes or Highlights
+-----------------
+
+> eth0 is used for external network communications.
+> lo is used for internal communication within the system.
+
+-----------------
+End of Document
+-----------------

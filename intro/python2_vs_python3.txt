@@ -1,0 +1,45 @@
+==============================
+PYTHON2 VS PYTHON3	
+==============================
+
+---------------------
+Differences
+---------------------
+
+- Many programs are written in python2.
+- For errors/inconsistences in python3.
+- Both are the same program language.
+- The may be slight changes in the packages names (for example) managed by both.
+- It allow us to run python scripts from command line.
+- It facilitates the execution of scripts in unix-like envs.
+- ITS A GOOD PRACTICE to name the version of python we're running in the shebang.
+
+.py Files without shebang
+---------------
+
+- You need to explicitly specify the interpreter.	
+
+--------------------------
+Pycharm
+--------------------------
+
+In Unix system, pycharm is located in \opt\ dir. The commands for opening pycharm in linux are:
+
+	1. cd \opt\Pycharm\bin
+	2. .\pycharm.sh
+
+-------------------------------------------
+Link Section (URLs displayed in plain text)
+-------------------------------------------
+
+GitHub: http://github.com
+
+-----------------
+Quotes or Highlights
+-----------------
+
+> "This is a quote from someone notable."
+
+-----------------
+End of Document
+-----------------
