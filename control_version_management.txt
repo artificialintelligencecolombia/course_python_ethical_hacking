@@ -2,32 +2,35 @@
 CONTROL VERSIONS MANAGEMENT
 ==============================
 
-Create new branch
+1.Create new branch
 ---------------
 Create a new branch for the current working machine.
 
 git checkout -b laptop
 
-Fetch changes
+The new branch brings along all the changes fro where i created it.
+
+2.Fetch changes
 ---------------
 Download changes from the remote but dont integrate them in the working branch.
 git fetch origin
+git log --oneline --graph --decorate --all
 
-Compare branches
+3.Compare branches
 ---------------
 Compare the local working branch with the remote tracking branch
-git diff origin/master
+!!!TESTING git diff origin/main 
 
 Note: if we see differences that need to be merged, do it:
-git merge origin/master
+git merge origin/main
 
-Resolve any merge conflicts
+4.Resolve any merge conflicts
 ---------------
 If there are conflicts between the local and remote changes, git will notify.
 git add <conflicted-file>
 fit commit -m "Resolved merge conflicts between laptop and master"
 
-Push New Branch to Remote
+5.Push New Branch to Remote
 ---------------
 this will store the changes in the remote repo without affecting master.S
 git push origin laptop
