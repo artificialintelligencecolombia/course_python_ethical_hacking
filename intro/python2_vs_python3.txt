@@ -12,7 +12,7 @@ Differences
 - The may be slight changes in the packages names (for example) managed by both.
 - It allow us to run python scripts from command line.
 - It facilitates the execution of scripts in unix-like envs.
-- ITS A GOOD PRACTICE
+- ITS A GOOD PRACTICE to name the version of python we're running in the shebang.
 
 .py Files without shebang
 ---------------
