@@ -1,18 +1,14 @@
-#!/usr/bin/env python 3
-
-# MAC SPoofer
-
-# Import required libraries
+#!usr/bin/env python3
 import subprocess
 
-
-def run_process():
-    subprocess.call(["ipconfig"], shell=True)
-    subprocess.call("ipconfig eth0 down", shell=True)
-    subprocess.call(["ipconfig eth0 hw ether A0:B1:C2:D3:E4:F5"], shell=True)
-    subprocess.call(["ipconfig eth0 up"], shell=True)
-    subprocess.call(["ipconfig"], shell=True)
-    print("Process executed")
+def mac_spoofer():
+    interface = input("Interface >")
+    new_mac = input("New MAC address (00:11:22:33:44:55)>")
     
-
-run_process()
+    subprocess.call(["ipconfig", interface,"down"])
+    subprocess.call(["ipconfig", interface,"hw","ether", new_mac])
+    subprocess.call(["ipconfig", interface,"up"])
+    print("MAC address successfully CHANGED")
+    
+if __name__ == "__main__":
+    mac_spoofer()
